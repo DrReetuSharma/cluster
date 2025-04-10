@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemAICluster: Clustering Results</title>
+</head>
+<body>
+    <h1>ChemAICluster: Clustering Results</h1>
+
+    <p>Your dataset has been successfully clustered into distinct groups!</p>
+
+    <p>You can download the clustered data by clicking the link below:</p>
+
+    <a href="{{ url_for('download_csv') }}">Download Clustered Data</a>
+
+    <h2>Clustered Data Preview:</h2>
+    <div>
+        {{ clustered_data|safe }}
+    </div>
+
+    <h2>Cluster Visualization:</h2>
+    <img src="data:image/png;base64,{{ img_data }}" alt="Cluster Plot">
+
+    <h2>Dendrogram Visualization (if hierarchical clustering selected):</h2>
+    <p>Dendrogram will be available in future versions.</p>
+
+    <p><a href="{{ url_for('index') }}">Go to Home</a></p>
+
+    <p>Contact: <a href="mailto:sharmar@aspire10x.com">sharmar@aspire10x.com</a></p>
+</body>
+</html>

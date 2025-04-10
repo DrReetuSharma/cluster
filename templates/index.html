@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemAICluster: A Molecular Clustering and Visualization Web Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>ChemAICluster</h1>
+        <p>A Molecular Clustering and Visualization Web Application</p>
+    </header>
+
+    <div class="container">
+        <h2>ChemAICluster</h2>
+        <h2>Molecular Clustering and Visualization App</h2>
+        <p>Upload your SMILES dataset to cluster molecules based on similarity scores.</p>
+
+        <form action="/process" method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="file-label">Choose a CSV File:</label>
+            <input type="file" name="file" id="file-upload" accept=".csv" required>
+
+            <label for="clustering-type">Select Clustering Algorithm:</label>
+            <select name="clustering_type" id="clustering-type">
+                <option value="kmeans">K-Means</option>
+                <option value="hierarchical">Hierarchical</option>
+            </select>
+
+            <label for="num-clusters">Number of Clusters (for K-Means):</label>
+            <input type="number" name="num_clusters" id="num-clusters" value="3" min="1" max="20">
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Contact: <a href="mailto:sharmar@aspire10x.com">sharmar@aspire10x.com</a></p>
+        <p><a href="{{ url_for('documentation') }}">Documentation</a></p>
+    </footer>
+</body>
+</html>
