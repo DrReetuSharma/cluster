@@ -1,0 +1,55 @@
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Docker & Git
+Dockerfile
+.dockerignore
+.git/
+.gitignore
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# IDE/project files
+.vscode/
+.idea/
+*.swp
+
+# Data files
+*.csv
+*.tsv
+*.xlsx
+*.db
+*.zip
+*.tar
+*.gz
+*.h5
+
+# Models
+*.pt
+*.pth
+*.pb
+*.onnx
+*.joblib
+
+# Misc
+node_modules/
